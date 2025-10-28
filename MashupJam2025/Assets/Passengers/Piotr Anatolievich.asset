@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Piotr Anatolievich
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Piotr Anatolievich
+  portrait: {fileID: 4130640169021434097, guid: 1f8bd4a49a1ddfc4e881a6d689aa8569, type: 3}
+  healthPoints: 100
+  charDescription: Piotr is a man in his late thirties. Mustachioed with very short
+    hair graying at the temples and bushy eyebrows, his chiseled face evokes an impassive
+    man, a quiet strength. As a former factory worker, his great muscular power is
+    a great advantage in the face of the dangers of the rails. Difficult to access,
+    his sensitive point is family. Talking to him about it allows him to open up.
+    He is actually a widower, an incendiary bomb having killed his wife. He had been
+    trying for a long time to have a child, and his wife's death devastated him.
+    He is now terrified of fire, freezing him on the spot. He carries with him the
+    ashes of his wife, which he wishes to scatter in the free zone, where the war
+    does not strike as she deserves eternal rest.
+  bonus:
+  - fort
+  - sang froid
+  - peur du feu
+  inkJSON: {fileID: 0}

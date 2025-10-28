@@ -24,10 +24,12 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput != 0)
             sr.flipX = moveInput < 0;
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
+
+        var dialogueManager = DialogueManager.GetInstance();
+        if (dialogueManager != null && dialogueManager.dialogueIsPlaying)
             return;
-        }
+
+        
     }
 
     void FixedUpdate()

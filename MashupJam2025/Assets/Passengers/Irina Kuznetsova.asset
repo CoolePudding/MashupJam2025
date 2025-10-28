@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Irina Kuznetsova
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Irina Kuznetsova
+  portrait: {fileID: 6937817954938267909, guid: 6bcd3a7c7fdf97a41b192aecb3b00903, type: 3}
+  healthPoints: 100
+  charDescription: "Irina Kuznetsova is an unremarkable thirty year old woman who
+    travel under a false name and in the compagny of her \u201Chusband\u201D, a huge
+    guy named Yakiv Myronenko. Quite discreet, she wear nice clothes and often has
+    to isolate herself, behind the excuse of a train sickness. Her husband is very
+    protective, but they seem not really close, they do not touch each other or even
+    kiss. Her real name is Nataliya Honcharova, a famous singer who, since the ennemy
+    has taken the capital, was \"strongly encouraged\" to sing for the leaders of
+    the occupying army. She choose to flee, with her bodyguard Andriy, and uses make-up
+    and wiggs to stay incognito. Talking with her reveal a kind and cultivated woman,
+    who might if she feel safe untertain other with her beautiful voice [ \xE0 voir
+    si on garde ou pas ce c\xF4t\xE9 l\xE0 ]."
+  bonus:
+  - incognito
+  - entertainer
+  - toujours a deux
+  inkJSON: {fileID: 0}

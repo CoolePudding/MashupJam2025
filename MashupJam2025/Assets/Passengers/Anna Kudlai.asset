@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Anna Kudlai
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Anna Kudlai
+  portrait: {fileID: -855298285791758126, guid: 858b58bff9ff2ff458fe6167d69ed193, type: 3}
+  healthPoints: 100
+  charDescription: "Anna Kudlai, 40 years old, is a pregnant woman. She seems always
+    tired and and isolate herself to cry from time to time. Talking with her \u2013
+    but never, ever touching her \u2013 can lead her to reveal a seamstress who loved
+    her job and lived under the occupation of the ennemy. Her father, taken prisoner
+    by soldiers, was too old to survive the harsh condition of prison. She went to
+    the officer in charge of the prison to beg for his freedom. He let him free in
+    exchange of sexual favors, a traumatic memory making her nauseous. As her belly
+    grew, his father quickly understood what happened and was furious. She flee the
+    unfair shame brought upon her and try to find a new life elsewhere. However,
+    she carry a gun and won't hesitate to fire at anyone trying to corner her or
+    grab her."
+  bonus:
+  - enceinte
+  - stresse
+  - le calibre
+  inkJSON: {fileID: 0}

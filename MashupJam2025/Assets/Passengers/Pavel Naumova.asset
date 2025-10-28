@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Pavel Naumova
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Pavel Naumova
+  portrait: {fileID: -4178046375966092550, guid: b3c041b6c13dccc4abdc2b83a6b63229, type: 3}
+  healthPoints: 100
+  charDescription: "Pavel Naumova is an athletic man(around 20, maybe younger), always
+    alert and quick to react at any menace. Shaved head and three day beard, he knows
+    a lot about how the army work. However he is an awful liar and as soon as soldier
+    are close-by, he's panicking. It is not hard to guess he is a deserter trying
+    to flee the conflit. Young recruit forced by his family to join the army to invade
+    this land, he follow the orders to not disappoint his parents, but he\u2019s
+    eyes opened up before what he was doing when he put a house on fire, hearing
+    screams coming out of the flames. it was the moment he knew he had to stop and
+    flee."
+  bonus:
+  - adroit
+  - mauvais menteur
+  - deserteur
+  - combattant
+  inkJSON: {fileID: 0}

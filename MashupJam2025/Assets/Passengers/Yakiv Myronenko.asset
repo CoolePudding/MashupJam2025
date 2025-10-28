@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Yakiv Myronenko
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Yakiv Myronenko
+  portrait: {fileID: 3465286685962602723, guid: f2f806ba129fef24397831c4134f6690, type: 3}
+  healthPoints: 100
+  charDescription: Yakiv Myronenko is the husband of Irina Kuznetsova. Strong and
+    protective, he's not easely intimidate and always vigilant. He deals with stress
+    by smoking, giving him a bad cough. When talking with him, he rather talk about
+    what he miss from the war, but avoid the subject of job, saying he was a Carpenter
+    (a lie that can be quite damageable later on). He talk with much respect about
+    his wife. His true name is Andriy, a body guard of the superstar Nataliya Honcharova,
+    here under the identity of his wife. He's a devoted protector who admired Nataliya
+    as she is a very generous and kind person.
+  bonus:
+  - fort
+  - observateur
+  - maladroit
+  - toujours a deux
+  inkJSON: {fileID: 0}

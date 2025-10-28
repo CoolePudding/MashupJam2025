@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Yelena Vasilieva
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Yelena Vasilieva
+  portrait: {fileID: 3465286685962602723, guid: f2f806ba129fef24397831c4134f6690, type: 3}
+  healthPoints: 100
+  charDescription: Yelena Vasilieva is a young woman in her early twenties, with
+    blonde, curly hair framing a pale-skinned face and bright eyes. Dressed elegantly,
+    she has a fierce character that sometimes leads her to be more defiant than reason
+    would dictate, no matter who stands before her. However, she has a good instinct
+    about people, tho tinged with icy cynicism and acerbic remarks. Evasive about
+    her past, she secretly carries with her bills of exchange worth a fortune, with
+    the ambition of exchanging them in the neutral zone.
+  bonus:
+  - observateur
+  - anti social
+  - sang froid
+  inkJSON: {fileID: 0}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6bcb85197f7e9c40a5a71a5116a5211, type: 3}
+  m_Name: Mykola Tymchenko
+  m_EditorClassIdentifier: Assembly-CSharp::PassengerData
+  passengerName: Mykola Tymchenko
+  portrait: {fileID: -4178046375966092550, guid: b3c041b6c13dccc4abdc2b83a6b63229, type: 3}
+  healthPoints: 100
+  charDescription: Mykola Tymchenko is a 25 years old train mechanic, quite good
+    at his job too. His family (he have a young daugther and a wife) are already
+    above frontier. He stayed behind so he could scrap up some more money to ensure
+    his family could make a fresh start. His limping stopped him from joining the
+    army, but he's not unhappy about it, as he's not a good shot either. In term
+    of character, he is a good guy always ready to help others.
+  bonus:
+  - bidouilleur
+  - social
+  - maladroit
+  - bigleux
+  inkJSON: {fileID: 0}

@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DIalogueTrigger : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 
 {
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
     [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
+    [SerializeField] public TextAsset inkJSON;
 
 
     private bool playerInRange;
