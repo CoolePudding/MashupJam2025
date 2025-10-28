@@ -1,42 +1,35 @@
-using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using Ink.Runtime;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
-    [Header("Dialogue UI")]
 
+    [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
-    [Header("Choice UI")]
+    [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
-
     private TextMeshProUGUI[] choicesText;
 
     private Story currentStory;
-
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
-
-
 
     private void Awake()
     {
         if (instance != null)
         {
-            Destroy(this);
+            Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
-        else
-        {
-            instance = this;
-        }
+        instance = this;
     }
+
     public static DialogueManager GetInstance()
     {
         return instance;
@@ -47,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
-        //get all choices text
+        // get all of the choices text 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
@@ -55,19 +48,22 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
-
     }
+
     private void Update()
     {
+        // return right away if dialogue isn't playing
         if (!dialogueIsPlaying)
         {
             return;
         }
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+
+        // handle continuing to the next line in the dialogue when submit is pressed
+        // NOTE: The 'currentStory.currentChoiecs.Count == 0' part was to fix a bug after the Youtube video was made
+        if (currentStory.currentChoices.Count == 0 && InputManager.GetInstance().GetSubmitPressed())
         {
             ContinueStory();
         }
-
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -78,67 +74,74 @@ public class DialogueManager : MonoBehaviour
 
         ContinueStory();
     }
+
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
     }
 
-    public void ContinueStory()
+    private void ContinueStory()
     {
         if (currentStory.canContinue)
         {
-            // afficher le texte actuel
+            // set text for the current dialogue line
             dialogueText.text = currentStory.Continue();
-            // afficher les choix de dialogue si il y en a pour la ligne de dialogue
+            // display choices, if any, for this dialogue line
             DisplayChoices();
-
         }
         else
         {
-            StartCoroutine( ExitDialogueMode());
-
+            StartCoroutine(ExitDialogueMode());
         }
-
     }
-    //----------------------------------------------------------------------------------------------------------------------------------WIP
+
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if (choices.Length < currentChoices.Count)
-
+        // defensive check to make sure our UI can support the number of choices coming in
+        if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError("Trop de choix par rapport a ce que l'UI peut afficher" + currentChoices.Count);
+            Debug.LogError("More choices were given than the UI can support. Number of choices given: "
+                + currentChoices.Count);
         }
-        int index = 0;
 
+        int index = 0;
+        // enable and initialize the choices up to the amount of choices for this line of dialogue
         foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
         }
-        //Go throught the remaining choice the UI supports and make sure they are hidden
-        for (int i = index; i < choices.Length; i++) 
+        // go through the remaining choices the UI supports and make sure they're hidden
+        for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
         }
-     
-        StartCoroutine(SelectFirstChoice());    
+
+        StartCoroutine(SelectFirstChoice());
     }
-    //--------------------------------------------------------------------------------------------------------------------------------------------------WIP
+
     private IEnumerator SelectFirstChoice()
     {
+        // Event System requires we clear it first, then wait
+        // for at least one frame before we set the current selected object.
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
     }
-    
+
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        // NOTE: The below two lines were added to fix a bug after the Youtube video was made
+        InputManager.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
+        ContinueStory();
     }
+
 }
