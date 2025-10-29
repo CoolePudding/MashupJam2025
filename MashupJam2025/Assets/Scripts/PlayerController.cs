@@ -24,16 +24,14 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput != 0)
             sr.flipX = moveInput < 0;
-
-        var dialogueManager = DialogueManager.GetInstance();
-        if (dialogueManager != null && dialogueManager.dialogueIsPlaying)
-            return;
-
-        
     }
 
     void FixedUpdate()
     {
+        var dialogueManager = DialogueManager.GetInstance();
+        if (dialogueManager != null && dialogueManager.dialogueIsPlaying)
+            return;
+
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 }

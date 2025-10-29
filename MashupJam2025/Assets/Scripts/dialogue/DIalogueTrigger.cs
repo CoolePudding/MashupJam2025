@@ -25,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
 
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().StartStory(inkJSON);
 
             }
         }

@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CabinScene.unity
     guid: 40d23858d5da98c4a819416bbe1feac7
   m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 41a5df01c43751f449622ad088b01004, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 8335e61fde777274bb45bdaa29302db2, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
