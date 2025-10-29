@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     private TextAsset currentStoryJSON = null;
     private Story currentStory;
 
+    [SerializeField] private  Button Continue;
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
@@ -81,7 +82,7 @@ public class DialogueManager : MonoBehaviour
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
-
+        Continue.gameObject.SetActive(currentChoices.Count == 0);
         // defensive check to make sure our UI can support the number of choices coming in
         if (currentChoices.Count > choices.Length)
         {
