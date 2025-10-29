@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Maryna Alekseenko
   portrait: {fileID: -6470460504253458178, guid: 30bec57c9acc09e4e8d91d992e7e8b82, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: Maryna Alekseenko is a young lady (14 or so) a bit intimidate
     being around strangers by herself. Curious and dynamic, she seems resourceful,
     good with her hands and small enough to go were other can't. Talking with her

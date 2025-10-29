@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Veronika Morozova
   portrait: {fileID: 4130640169021434097, guid: 1f8bd4a49a1ddfc4e881a6d689aa8569, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: Veronika Morozova is a seventy year old woman who seems always
     optimistic. Always happy to cheer up other, she is trying to reach the neutral
     zone to reunite with her daughter. In the way she has to pick-up at a certain

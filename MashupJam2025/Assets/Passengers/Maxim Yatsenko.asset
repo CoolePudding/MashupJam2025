@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Maxim Yatsenko
   portrait: {fileID: -6470460504253458178, guid: 30bec57c9acc09e4e8d91d992e7e8b82, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: "Maxim Yatsenko is a 35 years old man, with unclear origines.
     Gambler at heart, he's a risk taker and has trouble to stop in the middle of
     a streak, winning or loosing. However, he likes to talk (a bit too much maybe

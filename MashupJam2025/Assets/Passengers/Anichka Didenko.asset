@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Anichka Didenko
   portrait: {fileID: -855298285791758126, guid: 858b58bff9ff2ff458fe6167d69ed193, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: 'Anichka Didenko, red hair and green eyes, is quite the picture.
     Thin as a pencil but moving with great talent, this near thirty year old woman
     has had a rich life : dancing since she''s a little girl, the financial ruin

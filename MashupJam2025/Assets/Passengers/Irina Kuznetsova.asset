@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Irina Kuznetsova
   portrait: {fileID: 6937817954938267909, guid: 6bcd3a7c7fdf97a41b192aecb3b00903, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: "Irina Kuznetsova is an unremarkable thirty year old woman who
     travel under a false name and in the compagny of her \u201Chusband\u201D, a huge
     guy named Yakiv Myronenko. Quite discreet, she wear nice clothes and often has

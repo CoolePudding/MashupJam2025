@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Yelena Vasilieva
   portrait: {fileID: 3465286685962602723, guid: f2f806ba129fef24397831c4134f6690, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: Yelena Vasilieva is a young woman in her early twenties, with
     blonde, curly hair framing a pale-skinned face and bright eyes. Dressed elegantly,
     she has a fierce character that sometimes leads her to be more defiant than reason

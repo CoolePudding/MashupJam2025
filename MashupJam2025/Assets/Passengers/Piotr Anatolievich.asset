@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Piotr Anatolievich
   portrait: {fileID: 4130640169021434097, guid: 1f8bd4a49a1ddfc4e881a6d689aa8569, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: Piotr is a man in his late thirties. Mustachioed with very short
     hair graying at the temples and bushy eyebrows, his chiseled face evokes an impassive
     man, a quiet strength. As a former factory worker, his great muscular power is

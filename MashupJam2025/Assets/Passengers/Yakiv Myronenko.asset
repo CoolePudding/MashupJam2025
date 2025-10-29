@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Yakiv Myronenko
   portrait: {fileID: 3465286685962602723, guid: f2f806ba129fef24397831c4134f6690, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: Yakiv Myronenko is the husband of Irina Kuznetsova. Strong and
     protective, he's not easely intimidate and always vigilant. He deals with stress
     by smoking, giving him a bad cough. When talking with him, he rather talk about

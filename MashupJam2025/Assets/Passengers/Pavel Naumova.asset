@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Pavel Naumova
   portrait: {fileID: -4178046375966092550, guid: b3c041b6c13dccc4abdc2b83a6b63229, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: "Pavel Naumova is an athletic man(around 20, maybe younger), always
     alert and quick to react at any menace. Shaved head and three day beard, he knows
     a lot about how the army work. However he is an awful liar and as soon as soldier

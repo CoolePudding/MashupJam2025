@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Ivan Solovei
   portrait: {fileID: 6937817954938267909, guid: 6bcd3a7c7fdf97a41b192aecb3b00903, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: Ivan Solovei is a man in his forties clearly mark by great stress.
     His small round glasses bearly hide the fleeing but hard eyes of the man. Talking
     to Ivan firstly show that he is not a great team player, and seems a bit cold

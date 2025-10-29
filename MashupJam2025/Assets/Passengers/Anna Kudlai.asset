@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Anna Kudlai
   portrait: {fileID: -855298285791758126, guid: 858b58bff9ff2ff458fe6167d69ed193, type: 3}
-  healthPoints: 100
+  healthPoints: 3
   charDescription: "Anna Kudlai, 40 years old, is a pregnant woman. She seems always
     tired and and isolate herself to cry from time to time. Talking with her \u2013
     but never, ever touching her \u2013 can lead her to reveal a seamstress who loved
