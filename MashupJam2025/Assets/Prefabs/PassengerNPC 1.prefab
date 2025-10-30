@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2047502477794143443
+--- !u!1 &1986969186563871630
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3548243430565754721}
-  - component: {fileID: 747254636349521357}
+  - component: {fileID: 5441160454052003831}
+  - component: {fileID: 4589736475671491674}
   m_Layer: 0
   m_Name: DialogueTrigger
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3548243430565754721
+--- !u!4 &5441160454052003831
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047502477794143443}
+  m_GameObject: {fileID: 1986969186563871630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.17, z: 0}
-  m_LocalScale: {x: 0.97879, y: 0.97879, z: 0.97879}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1510454531611638924}
+  m_Father: {fileID: 7930277610485981152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &747254636349521357
+--- !u!212 &4589736475671491674
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047502477794143443}
+  m_GameObject: {fileID: 1986969186563871630}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Color: {r: 0.98490566, g: 0.1393733, b: 0.911875, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2202855114742251157
+--- !u!1 &5364098696928308681
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,41 +98,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1510454531611638924}
-  - component: {fileID: 4639607210322597154}
-  - component: {fileID: 2256810925967699161}
-  - component: {fileID: 4078404419943624196}
-  - component: {fileID: 7584888341857401530}
+  - component: {fileID: 7930277610485981152}
+  - component: {fileID: 2713809701234073746}
+  - component: {fileID: 6920673532243576599}
+  - component: {fileID: 7568309471263678622}
+  - component: {fileID: 2992717853904897041}
   m_Layer: 0
-  m_Name: PassengerNPC
+  m_Name: PassengerNPC 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1510454531611638924
+--- !u!4 &7930277610485981152
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202855114742251157}
+  m_GameObject: {fileID: 5364098696928308681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3548243430565754721}
+  - {fileID: 5441160454052003831}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4639607210322597154
+--- !u!212 &2713809701234073746
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202855114742251157}
+  m_GameObject: {fileID: 5364098696928308681}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -184,40 +184,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2256810925967699161
+--- !u!114 &6920673532243576599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202855114742251157}
+  m_GameObject: {fileID: 5364098696928308681}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 414915b2138e16d499b558d74f969f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PassengerNPC
   passengerData: {fileID: 11400000, guid: 47c7869ec940ad346bd2e93a403ce141, type: 2}
---- !u!114 &4078404419943624196
+--- !u!114 &7568309471263678622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202855114742251157}
+  m_GameObject: {fileID: 5364098696928308681}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56d4b861d0a9107458c287cc0a2a079f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  visualCue: {fileID: 2047502477794143443}
+  visualCue: {fileID: 1986969186563871630}
   inkJSON: {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
---- !u!61 &7584888341857401530
+--- !u!61 &2992717853904897041
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2202855114742251157}
+  m_GameObject: {fileID: 5364098696928308681}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
