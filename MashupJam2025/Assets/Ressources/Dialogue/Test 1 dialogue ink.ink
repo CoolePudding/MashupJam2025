@@ -1,29 +1,30 @@
 
-    This huge man doesn't seem to have noticed you.
+    This huge man doesn't seem to have noticed you.  #portrait:Piotr 
     
-    *•	Hello sir. I'm the train driver. What's your name ?
+    *•	Hello sir. I'm the train driver. What's your name ? 
  
         he barely moves to look at you.
 
-            Piotr
+            Piotr   #speaker:Piotr
                 ->Piotr1
                              === Piotr1 ===
-    *well hello Piotr, Nice to have you [here among us].
+    *well hello Piotr, Nice to have you [here among us]. 
 
-        "he grunts and nods"
+        "he grunts and nods"  
    
                 ->Piotr1
-    * just Piotr ?
+    * just Piotr ? 
 
-        Anatolievich.
+        Anatolievich.  
                 ->Piotr1
     
-    * •How are you feeling ?
+    * •How are you feeling ? 
 
-        "if his face doen't really move, you feel that hit something, somewhere under the fur".
-            Fine.
+        "if his face doen't really move, you feel that hit something, somewhere under the fur". 
+            Fine.  
             ->Piotr2
-    +/Have a nice day> / ->END
+    +/Have a nice day> /  
+    ->END  
 
     
     ===Piotr2===

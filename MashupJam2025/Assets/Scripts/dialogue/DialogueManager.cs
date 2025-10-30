@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI displayNameText;
 
     [Header("Choices UI")]
     [SerializeField] private Button[] choices;
@@ -25,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
+    private const string SPEAKER_TAG = "speaker";   
+
 
     private void Awake()
     {
@@ -69,6 +72,8 @@ public class DialogueManager : MonoBehaviour
             string text = currentStory.Continue();
             text = text.Trim();
             dialogueText.text = text;
+
+            HandleTags(currentStory.currentTags);
         }
         else
         {
@@ -79,6 +84,31 @@ public class DialogueManager : MonoBehaviour
 
         DisplayChoices();
     }
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+            if (splitTag.Length != 2)
+            {
+                Debug.LogError("tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+
+            switch (tagKey)
+            {
+                case SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is not currently being handled" + tag); 
+                    break;
+            }
+        }
+    }
+
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
