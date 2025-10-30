@@ -1,38 +1,54 @@
 using UnityEngine;
 using System;
-using System.Collections.Generic;
+using System.Collections;
 
 public class EventManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class GameEvent
+    [Header("Rail Event Dialogue Files (Phase 1,2,3)")]
+    [SerializeField] private TextAsset[] railEventInk;
+
+    [Header("Station Event Dialogue Files (Phase 1,2,3)")]
+    [SerializeField] private TextAsset[] stationEventInk;
+
+    private DialogueManager dialogueManager;
+
+    private void Awake()
     {
-        public string title;
-        [TextArea(2, 5)] public string description;
-        public int scrapChange;
-        public int foodChange;
-        public int gasolineChange;
-        public int trainDamage;
+        dialogueManager = DialogueManager.GetInstance();
     }
 
-    public List<GameEvent> travelEvents;
-
-    public void TriggerRandomTravelEvent(Action onComplete)
+    public void TriggerRailEvent(int phase, Action onComplete = null)
     {
-        GameEvent e = travelEvents[UnityEngine.Random.Range(0, travelEvents.Count)];
-        Debug.Log($"Event: {e.title} — {e.description}");
+        if (railEventInk == null || railEventInk.Length <= phase || railEventInk[phase] == null)
+        {
+            Debug.LogWarning($"No Ink file assigned for Rail Event phase {phase}!");
+            onComplete?.Invoke();
+            return;
+        }
 
-        ApplyEventEffects(e);
+        dialogueManager.StartStory(railEventInk[phase]);
+        StartCoroutine(WaitForDialogueToEnd(onComplete));
+    }
+
+    public void TriggerStationEvent(int phase, Action onComplete = null)
+    {
+        if (stationEventInk == null || stationEventInk.Length <= phase || stationEventInk[phase] == null)
+        {
+            Debug.LogWarning($"No Ink file assigned for Station Event phase {phase}!");
+            onComplete?.Invoke();
+            return;
+        }
+
+        dialogueManager.StartStory(stationEventInk[phase]);
+        StartCoroutine(WaitForDialogueToEnd(onComplete));
+    }
+
+    private IEnumerator WaitForDialogueToEnd(Action onComplete)
+    {
+        while (dialogueManager.dialogueIsPlaying)
+        {
+            yield return null;
+        }
         onComplete?.Invoke();
-    }
-
-    private void ApplyEventEffects(GameEvent e)
-    {
-        var rm = GameManager.Instance.resourceManager;
-
-        rm.AddScraps(e.scrapChange);
-        rm.food = Mathf.Clamp(rm.food + e.foodChange, 0, rm.maxFood);
-        rm.gasoline = Mathf.Clamp(rm.gasoline + e.gasolineChange, 0, rm.maxGasoline);
-        rm.DamageTrain(e.trainDamage);
     }
 }

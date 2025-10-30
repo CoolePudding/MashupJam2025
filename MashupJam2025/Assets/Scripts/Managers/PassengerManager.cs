@@ -3,104 +3,62 @@ using System.Collections.Generic;
 
 public class PassengerManager : MonoBehaviour
 {
-    [Header("Scene Setup")]
-    public Transform passengerParent;
-    public GameObject passengerPrefab;
-    public Transform[] spawnPoints; // <-- add this line
+    public static PassengerManager Instance { get; private set; }
 
-    [Header("Data Pool")]
-    public List<PassengerData> possiblePassengers = new List<PassengerData>();
+    [SerializeField] private GameObject passengerPrefab;
+    [SerializeField] private Transform passengerParent;
+    [SerializeField] private List<PassengerData> allPassengers;
 
-    public List<GameObject> activePassengers = new List<GameObject>();
+    public readonly List<PassengerNPC> activePassengers = new();
 
-    public void SpawnInitialPassengers(int count)
+    [Header("Initial Passengers")]
+    public PassengerData[] initialPassengers;
+
+    [Header("Spawn Points")]
+    public Transform[] spawnPoints;
+
+
+
+    private void Awake()
     {
-        foreach (var go in activePassengers)
-            if (go != null) Destroy(go);
-
-        activePassengers.Clear();
-
-        for (int i = 0; i < count; i++)
-            SpawnRandomPassenger(i);
+        Instance = this;
     }
 
-    public void SpawnRandomPassenger(int index)
+    public void SpawnInitialPassengers()
     {
-        if (possiblePassengers == null || possiblePassengers.Count == 0)
+        for (int i = 0; i < initialPassengers.Length; i++)
         {
-            Debug.LogWarning("No possiblePassengers left to spawn — all have been used!");
-            return;
+            Transform spawn = spawnPoints[i % spawnPoints.Length]; // fallback if fewer points than passengers
+            SpawnPassenger(initialPassengers[i], spawn.position);
         }
-
-        // Pick a random PassengerData
-        int randomIndex = Random.Range(0, possiblePassengers.Count);
-        PassengerData data = possiblePassengers[randomIndex];
-
-        // Remove from pool so it cant be picked again
-        possiblePassengers.RemoveAt(randomIndex);
-
-        // Instantiate prefab
-        GameObject passengerObj = Instantiate(passengerPrefab, passengerParent);
-
-        // Assign spawn point if available
-        if (spawnPoints != null && spawnPoints.Length > 0)
-        {
-            Transform spawn = spawnPoints[index % spawnPoints.Length];
-            passengerObj.transform.position = spawn.position;
-        }
-        else
-        {
-            // fallback: random small offset so they don’t overlap
-            passengerObj.transform.localPosition = new Vector3(Random.Range(-2f, 2f), 0, 0);
-        }
-
-        // Apply data
-        PassengerNPC passenger = passengerObj.GetComponent<PassengerNPC>();
-        if (passenger == null)
-        {
-            Debug.LogError("Passenger prefab does not contain a PassengerNPC component!");
-            Destroy(passengerObj);
-            return;
-        }
-
-        passenger.Initialize(data);
-        activePassengers.Add(passengerObj);
     }
 
 
-    // Call when arriving at a station to consume food and apply consequences
-    public void OnArriveAtStation()
+    public void SpawnPassenger(PassengerData data, Vector3 position = default)
     {
-        var rm = GameManager.Instance.resourceManager;
+        if (position == default)
+            position = passengerParent.position;
 
-        // iterate over a copy because we may remove during iteration
-        foreach (var passengerObj in activePassengers.ToArray())
+        GameObject passengerObj = Instantiate(passengerPrefab, position, Quaternion.identity, passengerParent);
+        PassengerNPC npc = passengerObj.GetComponent<PassengerNPC>();
+        npc.Initialize(data);
+        activePassengers.Add(npc);
+    }
+
+
+
+    public void RemovePassenger(PassengerData data)
+    {
+        PassengerNPC npc = activePassengers.Find(p => p.passengerData == data);
+        if (npc != null)
         {
-            if (passengerObj == null) continue;
-
-            PassengerNPC passenger = passengerObj.GetComponent<PassengerNPC>();
-            if (passenger == null) continue;
-
-            // consume one food per passenger; if not enough food -> damage
-            bool ate = rm.ConsumeFood(1);
-            if (!ate)
-            {
-                passenger.TakeDamage(1); 
-            }
-
-            if (passenger.IsDead)
-            {
-                // remove from active list and destroy GameObject
-                activePassengers.Remove(passengerObj);
-                Destroy(passengerObj);
-                Debug.Log($"{passenger.passengerData.passengerName} has died due to starvation or events.");
-            }
+            activePassengers.Remove(npc);
+            Destroy(npc.gameObject);
         }
     }
 
-    // Utility: get count
-    public int GetPassengerCount()
+    public PassengerData GetPassengerByName(string name)
     {
-        return activePassengers.Count;
+        return allPassengers.Find(p => p.passengerName == name);
     }
 }

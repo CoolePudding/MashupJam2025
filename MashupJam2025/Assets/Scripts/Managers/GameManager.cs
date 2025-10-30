@@ -1,74 +1,106 @@
-using UnityEngine;
-using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager instance;
+
+    [Header("Game Loop Settings")]
+    public int totalPhases = 3;
+    [HideInInspector] public int currentPhase = 0;
 
     [Header("Managers")]
-    public ResourceManager resourceManager;
-    public PassengerManager passengerManager;
-    public EventManager eventManager;
-    public StationManager stationManager;
+    [SerializeField] private PassengerManager passengerManager;
+    [SerializeField] private EventManager eventManager;
 
-    [Header("Game State")]
-    public int currentStationIndex = 0;
-    public bool isTraveling = false;
+    [Header("Player Settings")]
+    [SerializeField] private GameObject player;
 
-    public event Action OnTravelStart;
-    public event Action OnTravelEnd;
+    private bool cabinPhaseActive = false;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (instance != null)
         {
+            Debug.LogWarning("More than one GameManager found!");
             Destroy(gameObject);
             return;
         }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        instance = this;
+
+        // Spawn the predetermined passengers at initial positions
+        passengerManager.SpawnInitialPassengers();
     }
 
     private void Start()
     {
-        StartNewGame();
+        StartPhase();
     }
 
-    public void StartNewGame()
+    public void StartPhase()
     {
-        resourceManager.InitializeResources();
-        passengerManager.SpawnInitialPassengers(5);
-        stationManager.EnterStation(currentStationIndex);
-    }
-
-    public void StartTravel()
-    {
-        if (resourceManager.ConsumeGasoline(1))
+        if (currentPhase >= totalPhases)
         {
-            isTraveling = true;
-            OnTravelStart?.Invoke();
+            EndGame();
+            return;
+        }
 
-            // Random travel event
-            eventManager.TriggerRandomTravelEvent(() =>
+        Debug.Log($"Starting Phase {currentPhase + 1}");
+        cabinPhaseActive = true;
+
+        EnablePassengerInteractions(true);
+    }
+
+    public void EndCabinPhase()
+    {
+        if (!cabinPhaseActive) return;
+        cabinPhaseActive = false;
+
+        EnablePassengerInteractions(false);
+
+        // Trigger Rail Event for current phase
+        eventManager.TriggerRailEvent(currentPhase, () =>
+        {
+            // After Rail Event, trigger Station Event for current phase
+            eventManager.TriggerStationEvent(currentPhase, () =>
             {
-                // When event is done:
-                EndTravel();
+                currentPhase++;
+                if (currentPhase < totalPhases)
+                {
+                    StartPhase();
+                }
+                else
+                {
+                    EndGame();
+                }
             });
-        }
-        else
+        });
+    }
+
+    private void EnablePassengerInteractions(bool enabled)
+    {
+        foreach (PassengerNPC npc in passengerManager.activePassengers)
         {
-            Debug.Log("Not enough gasoline to travel!");
+            // Assuming PassengerNPC has a Collider2D for interaction
+            Collider2D col = npc.GetComponent<Collider2D>();
+            if (col != null) col.enabled = enabled;
         }
     }
 
-    public void EndTravel()
+    public void AddPassenger(PassengerData data, Vector3 spawnPosition)
     {
-        isTraveling = false;
-        currentStationIndex++;
-        OnTravelEnd?.Invoke();
+        passengerManager.SpawnPassenger(data, spawnPosition);
+    }
 
-        // Arrive at new station
-        stationManager.EnterStation(currentStationIndex);
+    public void RemovePassenger(PassengerData data)
+    {
+        passengerManager.RemovePassenger(data);
+    }
+
+    private void EndGame()
+    {
+        Debug.Log("Game finished!");
+        // Here you can add logic to show end screen or return to menu
     }
 }

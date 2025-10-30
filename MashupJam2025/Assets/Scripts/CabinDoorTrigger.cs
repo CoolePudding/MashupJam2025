@@ -3,8 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class CabinDoorTrigger : MonoBehaviour
 {
-    public string sceneToLoad = "CabinScene";
     private bool isInRange = false;
+
+    public GameManager gameManager;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,7 +31,7 @@ public class CabinDoorTrigger : MonoBehaviour
     
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            gameManager.EndCabinPhase();
         }
     }
 

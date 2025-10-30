@@ -6,16 +6,8 @@ public class PassengerData : ScriptableObject
     [Header("Basic Info")]
     public string passengerName;
     public Sprite portrait;
-    public int healthPoints = 3;
 
-    [TextArea(2, 4)]
-    public string charDescription;
+    [Header("Dialogue per Phase")]
+    public TextAsset[] dialoguePerPhase;
 
-    [Header("Bonus")]
-    public string[] bonus;
-
-   
-
-    [Header("Dialogue")]
-    public TextAsset inkJSON; 
 }

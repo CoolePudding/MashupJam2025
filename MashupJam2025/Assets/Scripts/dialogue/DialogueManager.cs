@@ -26,7 +26,10 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
-    private const string SPEAKER_TAG = "speaker";   
+    private const string SPEAKER_TAG = "speaker";
+
+    private System.Action onStoryComplete; //callback when story finishes
+
 
 
     private void Awake()
@@ -61,6 +64,8 @@ public class DialogueManager : MonoBehaviour
         currentStoryJSON = inkJSON;
         currentStory = new Story(currentStoryJSON.text);
 
+        BindExternalFunctions();
+
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         RefreshView();
@@ -80,6 +85,8 @@ public class DialogueManager : MonoBehaviour
             dialogueIsPlaying = false;
             dialoguePanel.SetActive(false);
             dialogueText.text = "";
+
+            onStoryComplete?.Invoke();
         }
 
         DisplayChoices();
@@ -140,5 +147,26 @@ public class DialogueManager : MonoBehaviour
         Debug.Log($"Choice {choiceIndex}");
         currentStory.ChooseChoiceIndex(choiceIndex);
         RefreshView();
+    }
+
+    private void BindExternalFunctions()
+    {
+        currentStory.BindExternalFunction("AddPassenger", (string passengerName) =>
+        {
+            var data = PassengerManager.Instance.GetPassengerByName(passengerName);
+            if (data != null)
+                PassengerManager.Instance.SpawnPassenger(data);
+            else
+                Debug.LogWarning($"AddPassenger: Passenger '{passengerName}' not found!");
+        });
+
+        currentStory.BindExternalFunction("RemovePassenger", (string passengerName) =>
+        {
+            var data = PassengerManager.Instance.GetPassengerByName(passengerName);
+            if (data != null)
+                PassengerManager.Instance.RemovePassenger(data);
+            else
+                Debug.LogWarning($"RemovePassenger: Passenger '{passengerName}' not found!");
+        });
     }
 }
