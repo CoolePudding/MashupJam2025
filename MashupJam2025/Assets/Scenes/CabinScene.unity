@@ -3414,13 +3414,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
   railEventInk:
-  - {fileID: 4900000, guid: c03c2c190f34f2a49bde04c45fff7104, type: 3}
+  - {fileID: 4900000, guid: d4520682660f06b4f98055d0254bc610, type: 3}
   - {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
   - {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
-  stationEventInk:
-  - {fileID: 4900000, guid: c03c2c190f34f2a49bde04c45fff7104, type: 3}
-  - {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
-  - {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
+  stationEventInk: []
 --- !u!1 &1283253177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4061,7 +4058,7 @@ Transform:
   m_GameObject: {fileID: 1633650940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.05, y: 0.46, z: 0}
+  m_LocalPosition: {x: 15.58, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
