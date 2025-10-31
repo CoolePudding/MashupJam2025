@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     private float lastMoveDirection = 1f;
     private Animator animator;
 
+    public float climbSpeed = 3f;
+    private bool isClimbing = false;
+    private float verticalInput;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +42,19 @@ public class PlayerController : MonoBehaviour
             sr.flipX = lastMoveDirection < 0;
             animator.SetBool("isWalking", false);
         }
+
+        verticalInput = Input.GetAxis("Vertical");
+
+        if (isClimbing)
+        {
+            rb.gravityScale = 0;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, verticalInput * climbSpeed);
+        }
+        else
+        {
+            rb.gravityScale = 1;
+        }
+
     }
 
     void FixedUpdate()
@@ -46,5 +64,22 @@ public class PlayerController : MonoBehaviour
             return;
 
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ladder"))
+        {
+            isClimbing = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Ladder"))
+        {
+            isClimbing = false;
+        }
     }
 }
