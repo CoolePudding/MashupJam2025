@@ -19,6 +19,7 @@ public class PassengerNPC : MonoBehaviour
     public void Initialize(PassengerData data)
     {
         passengerData = data;
+
         ApplyPortrait();
     }
 
