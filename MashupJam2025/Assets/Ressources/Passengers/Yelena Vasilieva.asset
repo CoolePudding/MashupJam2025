@@ -14,16 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Yelena Vasilieva
   portrait: {fileID: 3465286685962602723, guid: f2f806ba129fef24397831c4134f6690, type: 3}
-  healthPoints: 3
-  charDescription: Yelena Vasilieva is a young woman in her early twenties, with
-    blonde, curly hair framing a pale-skinned face and bright eyes. Dressed elegantly,
-    she has a fierce character that sometimes leads her to be more defiant than reason
-    would dictate, no matter who stands before her. However, she has a good instinct
-    about people, tho tinged with icy cynicism and acerbic remarks. Evasive about
-    her past, she secretly carries with her bills of exchange worth a fortune, with
-    the ambition of exchanging them in the neutral zone.
-  bonus:
-  - observateur
-  - anti social
-  - sang froid
-  inkJSON: {fileID: 0}
+  dialoguePerPhase: []

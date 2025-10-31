@@ -14,19 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Pavel Naumova
   portrait: {fileID: -4178046375966092550, guid: b3c041b6c13dccc4abdc2b83a6b63229, type: 3}
-  healthPoints: 3
-  charDescription: "Pavel Naumova is an athletic man(around 20, maybe younger), always
-    alert and quick to react at any menace. Shaved head and three day beard, he knows
-    a lot about how the army work. However he is an awful liar and as soon as soldier
-    are close-by, he's panicking. It is not hard to guess he is a deserter trying
-    to flee the conflit. Young recruit forced by his family to join the army to invade
-    this land, he follow the orders to not disappoint his parents, but he\u2019s
-    eyes opened up before what he was doing when he put a house on fire, hearing
-    screams coming out of the flames. it was the moment he knew he had to stop and
-    flee."
-  bonus:
-  - adroit
-  - mauvais menteur
-  - deserteur
-  - combattant
-  inkJSON: {fileID: 0}
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: 4cdf863a553e6f04cacf37d37aee85cb, type: 3}

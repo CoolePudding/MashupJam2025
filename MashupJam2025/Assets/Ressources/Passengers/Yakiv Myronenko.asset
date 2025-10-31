@@ -14,18 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Yakiv Myronenko
   portrait: {fileID: 3465286685962602723, guid: f2f806ba129fef24397831c4134f6690, type: 3}
-  healthPoints: 3
-  charDescription: Yakiv Myronenko is the husband of Irina Kuznetsova. Strong and
-    protective, he's not easely intimidate and always vigilant. He deals with stress
-    by smoking, giving him a bad cough. When talking with him, he rather talk about
-    what he miss from the war, but avoid the subject of job, saying he was a Carpenter
-    (a lie that can be quite damageable later on). He talk with much respect about
-    his wife. His true name is Andriy, a body guard of the superstar Nataliya Honcharova,
-    here under the identity of his wife. He's a devoted protector who admired Nataliya
-    as she is a very generous and kind person.
-  bonus:
-  - fort
-  - observateur
-  - maladroit
-  - toujours a deux
-  inkJSON: {fileID: 0}
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: bd81d243f91907a42939eea6a2effe5f, type: 3}

@@ -14,18 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Ivan Solovei
   portrait: {fileID: 6937817954938267909, guid: 6bcd3a7c7fdf97a41b192aecb3b00903, type: 3}
-  healthPoints: 3
-  charDescription: Ivan Solovei is a man in his forties clearly mark by great stress.
-    His small round glasses bearly hide the fleeing but hard eyes of the man. Talking
-    to Ivan firstly show that he is not a great team player, and seems a bit cold
-    with people, staying in his corner. The truth about him is that he's a quisling
-    that led many to their death. At the time, he did it mostly by fear of death,
-    but he now regrets very much what he did and is not far mentally from suicide.
-    The discovery of his secret may lead to a catastrophy, wich could happen if he
-    is recognised by someone or if he is found by the defensive forces, but in the
-    meantime he know how to talk to officers of the occupying force.
-  bonus:
-  - anti social
-  - collabo
-  - stresse
-  inkJSON: {fileID: 0}
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: b0f1c53a3fcd86044b12b8aea3b51e09, type: 3}

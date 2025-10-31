@@ -14,16 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Mykola Tymchenko
   portrait: {fileID: -4178046375966092550, guid: b3c041b6c13dccc4abdc2b83a6b63229, type: 3}
-  healthPoints: 3
-  charDescription: Mykola Tymchenko is a 25 years old train mechanic, quite good
-    at his job too. His family (he have a young daugther and a wife) are already
-    above frontier. He stayed behind so he could scrap up some more money to ensure
-    his family could make a fresh start. His limping stopped him from joining the
-    army, but he's not unhappy about it, as he's not a good shot either. In term
-    of character, he is a good guy always ready to help others.
-  bonus:
-  - bidouilleur
-  - social
-  - maladroit
-  - bigleux
-  inkJSON: {fileID: 0}
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: 200698b8ea447d443b1d81999bb3f2b4, type: 3}
