@@ -8,6 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject visualCue;
     [Header("Ink JSON")]
     [SerializeField] public TextAsset inkJSON;
+    public PassengerNPC NPC;
 
 
     private bool playerInRange;
@@ -25,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
 
-                DialogueManager.GetInstance().StartStory(inkJSON);
+                DialogueManager.GetInstance().StartStory(NPC.passengerData.dialoguePerPhase[0]);
 
             }
         }
