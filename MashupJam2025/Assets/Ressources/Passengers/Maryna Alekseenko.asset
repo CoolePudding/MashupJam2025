@@ -13,25 +13,6 @@ MonoBehaviour:
   m_Name: Maryna Alekseenko
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Maryna Alekseenko
-  portrait: {fileID: -6470460504253458178, guid: 30bec57c9acc09e4e8d91d992e7e8b82, type: 3}
-  healthPoints: 3
-  charDescription: Maryna Alekseenko is a young lady (14 or so) a bit intimidate
-    being around strangers by herself. Curious and dynamic, she seems resourceful,
-    good with her hands and small enough to go were other can't. Talking with her
-    do not show much of her character or past, but playing a game of cards with her
-    is the best way to make her talk. In fact she often make her hands busy by shuffling
-    a deck and playing solitary. While in a card game, she might suggest that her
-    parents were real heroes, and her deep, seethling hate of the invaders. She is
-    the daugther of a civilian resistant movement who were killed. She transport
-    with her in a bag a hidden bomb ready to assemble, waiting for the right moment
-    to put it in a local commander building to exert her vengeance. She might have
-    trouble keeping her cool with the invading forces. If she know that Ivan is a
-    quisling, she will hate him and probably vote for his departure of the train,
-    and even try to kill him.
-  bonus:
-  - bagou
-  - bidouillage
-  - adroit
-  - haine de l'envahisseur
-  - la bombe
-  inkJSON: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 10c6fcbca04a3e8448e07413b6244472, type: 3}
+  dialoguePerPhase: []
+  animatorController: {fileID: 9100000, guid: 5e1f20e7899bb1d43857c4820b69bf20, type: 2}

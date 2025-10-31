@@ -13,26 +13,6 @@ MonoBehaviour:
   m_Name: Anichka Didenko
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Anichka Didenko
-  portrait: {fileID: -855298285791758126, guid: 858b58bff9ff2ff458fe6167d69ed193, type: 3}
-  healthPoints: 3
-  charDescription: 'Anichka Didenko, red hair and green eyes, is quite the picture.
-    Thin as a pencil but moving with great talent, this near thirty year old woman
-    has had a rich life : dancing since she''s a little girl, the financial ruin
-    of her father stopped her from entering the Great School of Classical Dance of
-    the Opera. To lighten the weight on the shoulder of her father, she perform slapstick
-    comedy in the streets with a few friends. She then was selected to enter a circus,
-    were she performed as an acrobate. As the war was raging on, she chose to join
-    her family in the neutral zone, as the circus owner is willing to perform for
-    the ennemy.
-
-
-
-    She say the secret to her talent is to not fear death, as
-    she believe luck follow her everywere. You could say that she is a bit overconfident,
-    yes, but any situation asking for a light weight and a careful step is right
-    in her alley.'
-  bonus:
-  - adroit
-  - social
-  - risque tout
-  inkJSON: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 77c1161b0e0a8704dac64f8c32b24ba7, type: 3}
+  dialoguePerPhase: []
+  animatorController: {fileID: 9100000, guid: 7ec09cf31e1b6e043ab305db74ea8fb6, type: 2}

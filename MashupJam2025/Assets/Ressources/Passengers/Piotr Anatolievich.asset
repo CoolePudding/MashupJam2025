@@ -13,20 +13,6 @@ MonoBehaviour:
   m_Name: Piotr Anatolievich
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Piotr Anatolievich
-  portrait: {fileID: 4130640169021434097, guid: 1f8bd4a49a1ddfc4e881a6d689aa8569, type: 3}
-  healthPoints: 3
-  charDescription: Piotr is a man in his late thirties. Mustachioed with very short
-    hair graying at the temples and bushy eyebrows, his chiseled face evokes an impassive
-    man, a quiet strength. As a former factory worker, his great muscular power is
-    a great advantage in the face of the dangers of the rails. Difficult to access,
-    his sensitive point is family. Talking to him about it allows him to open up.
-    He is actually a widower, an incendiary bomb having killed his wife. He had been
-    trying for a long time to have a child, and his wife's death devastated him.
-    He is now terrified of fire, freezing him on the spot. He carries with him the
-    ashes of his wife, which he wishes to scatter in the free zone, where the war
-    does not strike as she deserves eternal rest.
-  bonus:
-  - fort
-  - sang froid
-  - peur du feu
-  inkJSON: {fileID: 0}
+  portrait: {fileID: 21300000, guid: c1f1bc672ade6a14c8e4ca6f433e97b9, type: 3}
+  dialoguePerPhase: []
+  animatorController: {fileID: 9100000, guid: ad9764ba769a85a4ab6a422850894cb5, type: 2}

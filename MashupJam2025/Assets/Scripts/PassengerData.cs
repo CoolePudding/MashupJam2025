@@ -10,4 +10,7 @@ public class PassengerData : ScriptableObject
     [Header("Dialogue per Phase")]
     public TextAsset[] dialoguePerPhase;
 
+    [Header("Animation")]
+    public RuntimeAnimatorController animatorController;
+
 }

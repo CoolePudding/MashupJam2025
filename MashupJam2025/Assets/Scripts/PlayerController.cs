@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public float climbSpeed = 3f;
     private bool isClimbing = false;
+    private bool canClimb = false;
     private float verticalInput;
     public float gravity = 5f;
 
@@ -46,14 +47,30 @@ public class PlayerController : MonoBehaviour
 
         verticalInput = Input.GetAxis("Vertical");
 
+        if (canClimb && !isClimbing)
+        {
+            if (Mathf.Abs(verticalInput) > 0.01f)
+            {
+                isClimbing = true;
+            }
+        }
+
         if (isClimbing)
         {
             rb.gravityScale = 0;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, verticalInput * climbSpeed);
+
+            bool isActuallyClimbing = Mathf.Abs(verticalInput) > 0.01f;
+            animator.SetBool("isClimbing", true);
+            animator.SetFloat("verticalSpeed", isActuallyClimbing ? Mathf.Abs(verticalInput) : 0f);
+            animator.speed = Mathf.Abs(verticalInput) > 0.01f ? 1 : 0;
         }
         else
         {
             rb.gravityScale = gravity;
+            animator.SetBool("isClimbing", false);
+            animator.SetFloat("verticalSpeed", 0f);
+            animator.speed = 1;
         }
 
     }
@@ -72,7 +89,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Ladder"))
         {
-            isClimbing = true;
+            canClimb = true;
         }
     }
 
@@ -80,7 +97,9 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Ladder"))
         {
+            canClimb = false;
             isClimbing = false;
         }
     }
+
 }
