@@ -151,13 +151,13 @@ public class DialogueManager : MonoBehaviour
 
     private void BindExternalFunctions()
     {
-        currentStory.BindExternalFunction("AddPassenger", (string passengerName) =>
+        currentStory.BindExternalFunction("SpawnPassenger", (string passengerName) =>
         {
             var data = PassengerManager.Instance.GetPassengerByName(passengerName);
             if (data != null)
                 PassengerManager.Instance.SpawnPassenger(data);
             else
-                Debug.LogWarning($"AddPassenger: Passenger '{passengerName}' not found!");
+                Debug.LogWarning($"SpawnPassenger: Passenger '{passengerName}' not found!");
         });
 
         currentStory.BindExternalFunction("RemovePassenger", (string passengerName) =>
