@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class CabinDoorTrigger : MonoBehaviour
 {
@@ -8,12 +10,23 @@ public class CabinDoorTrigger : MonoBehaviour
     public GameManager gameManager;
 
 
+    [SerializeField] private TextMeshProUGUI promptText; // Assign in Inspector
+
+    private void Start()
+    {
+        if (promptText != null)
+            promptText.gameObject.SetActive(false);
+    }
+
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             isInRange = true;
-            // Optional: show UI prompt "Press E to enter"
+            if (promptText != null)
+                promptText.gameObject.SetActive(true);
         }
     }
   
@@ -22,6 +35,8 @@ public class CabinDoorTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         { 
         isInRange = false;
+        if (promptText != null)
+                promptText.gameObject.SetActive(false);
         }
     }
 
@@ -31,6 +46,9 @@ public class CabinDoorTrigger : MonoBehaviour
     
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
+
+            if (promptText != null)
+                promptText.gameObject.SetActive(false);
             gameManager.EndCabinPhase();
         }
     }

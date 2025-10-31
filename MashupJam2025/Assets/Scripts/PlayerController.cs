@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public float climbSpeed = 3f;
     private bool isClimbing = false;
     private float verticalInput;
+    public float gravity = 5f;
 
 
     void Start()
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rb.gravityScale = 1;
+            rb.gravityScale = gravity;
         }
 
     }

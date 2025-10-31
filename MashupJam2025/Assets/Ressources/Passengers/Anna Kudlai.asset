@@ -14,20 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Anna Kudlai
   portrait: {fileID: -855298285791758126, guid: 858b58bff9ff2ff458fe6167d69ed193, type: 3}
-  healthPoints: 3
-  charDescription: "Anna Kudlai, 40 years old, is a pregnant woman. She seems always
-    tired and and isolate herself to cry from time to time. Talking with her \u2013
-    but never, ever touching her \u2013 can lead her to reveal a seamstress who loved
-    her job and lived under the occupation of the ennemy. Her father, taken prisoner
-    by soldiers, was too old to survive the harsh condition of prison. She went to
-    the officer in charge of the prison to beg for his freedom. He let him free in
-    exchange of sexual favors, a traumatic memory making her nauseous. As her belly
-    grew, his father quickly understood what happened and was furious. She flee the
-    unfair shame brought upon her and try to find a new life elsewhere. However,
-    she carry a gun and won't hesitate to fire at anyone trying to corner her or
-    grab her."
-  bonus:
-  - enceinte
-  - stresse
-  - le calibre
-  inkJSON: {fileID: 0}
+  dialoguePerPhase:
+  - {fileID: 0}
