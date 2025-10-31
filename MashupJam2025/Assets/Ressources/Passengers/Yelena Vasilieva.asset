@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Yelena Vasilieva
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Yelena Vasilieva
-  portrait: {fileID: 9100154494335304427, guid: 0e5af47c592b457468fb27753fac07cb, type: 3}
+  portrait: {fileID: 21300000, guid: 9c9cf27a312961440888c089691ff513, type: 3}
   dialoguePerPhase:
   - {fileID: 4900000, guid: bd81d243f91907a42939eea6a2effe5f, type: 3}
   animatorController: {fileID: 9100000, guid: 87c65e0feffd9774a862c72c7672e564, type: 2}

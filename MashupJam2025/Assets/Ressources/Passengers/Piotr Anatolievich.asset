@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Piotr Anatolievich
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Piotr Anatolievich
-  portrait: {fileID: -2257878227621304066, guid: dcea6a1560352d849ab697efe2115f5e, type: 3}
+  portrait: {fileID: 21300000, guid: c1f1bc672ade6a14c8e4ca6f433e97b9, type: 3}
   dialoguePerPhase:
   - {fileID: 4900000, guid: 5b2c9b7185cecb4419cbc38bb7fe0684, type: 3}
   animatorController: {fileID: 9100000, guid: ad9764ba769a85a4ab6a422850894cb5, type: 2}
