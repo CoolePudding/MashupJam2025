@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Maryna Alekseenko
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Maryna Alekseenko
-  portrait: {fileID: -6470460504253458178, guid: 30bec57c9acc09e4e8d91d992e7e8b82, type: 3}
+  portrait: {fileID: 21300000, guid: 10c6fcbca04a3e8448e07413b6244472, type: 3}
   dialoguePerPhase:
   - {fileID: 4900000, guid: 062f43ce0b5b08d41ba3f971c65c1b7e, type: 3}
+  animatorController: {fileID: 9100000, guid: 5e1f20e7899bb1d43857c4820b69bf20, type: 2}

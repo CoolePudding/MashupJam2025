@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Anichka Didenko
   portrait: {fileID: 21300000, guid: 77c1161b0e0a8704dac64f8c32b24ba7, type: 3}
-  dialoguePerPhase: []
+  dialoguePerPhase:
+  - {fileID: 0}
   animatorController: {fileID: 9100000, guid: 7ec09cf31e1b6e043ab305db74ea8fb6, type: 2}

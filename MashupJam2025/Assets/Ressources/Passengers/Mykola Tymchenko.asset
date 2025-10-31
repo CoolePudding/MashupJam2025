@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mykola Tymchenko
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Mykola Tymchenko
-  portrait: {fileID: -4178046375966092550, guid: b3c041b6c13dccc4abdc2b83a6b63229, type: 3}
+  portrait: {fileID: 21300000, guid: 6a26bb73e5c17ff499ad370b17272deb, type: 3}
   dialoguePerPhase:
   - {fileID: 4900000, guid: 200698b8ea447d443b1d81999bb3f2b4, type: 3}
+  animatorController: {fileID: 9100000, guid: 4d017e2b199fc054298e41fa5c524cd9, type: 2}

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Maxim Yatsenko
   portrait: {fileID: 21300000, guid: 83ee587dd728b794abb47c3d351453d5, type: 3}
-  dialoguePerPhase: []
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: 062f43ce0b5b08d41ba3f971c65c1b7e, type: 3}
   animatorController: {fileID: 9100000, guid: 6404df57906f445439fa65be527db28e, type: 2}
