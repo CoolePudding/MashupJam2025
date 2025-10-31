@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
     private System.Action onStoryComplete; //callback when story finishes
 
 
+    [SerializeField] public Image portraitImage;
 
     private void Awake()
     {
@@ -68,11 +69,21 @@ public class DialogueManager : MonoBehaviour
 
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+
+
+        displayNameText.text = "???";
+
         RefreshView();
+
+
+        portraitImage.enabled = true;
     }
     public void RefreshView()
     {
-        if(currentStory.canContinue)
+
+        portraitImage.enabled = true;
+
+        if (currentStory.canContinue)
         {
             string text = currentStory.Continue();
             text = text.Trim();
@@ -86,6 +97,9 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
             dialogueText.text = "";
 
+            if (portraitImage != null)
+                portraitImage.enabled = false; // hide portrait when dialogue ends
+
             onStoryComplete?.Invoke();
         }
 
@@ -98,23 +112,38 @@ public class DialogueManager : MonoBehaviour
             string[] splitTag = tag.Split(':');
             if (splitTag.Length != 2)
             {
-                Debug.LogError("tag could not be appropriately parsed: " + tag);
+                Debug.LogError("Tag could not be appropriately parsed: " + tag);
+                continue;
             }
+
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
-
 
             switch (tagKey)
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
+
+                    var data = PassengerManager.Instance.GetPassengerByName(tagValue);
+                    if (data != null && portraitImage != null)
+                    {
+                        portraitImage.sprite = data.portrait;
+                        portraitImage.enabled = true;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"No portrait found for speaker: {tagValue}");
+                        portraitImage.enabled = false;
+                    }
                     break;
+
                 default:
-                    Debug.LogWarning("Tag came in but is not currently being handled" + tag); 
+                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                     break;
             }
         }
     }
+
 
     private void DisplayChoices()
     {
@@ -148,6 +177,17 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChooseChoiceIndex(choiceIndex);
         RefreshView();
     }
+
+    public void SetPortrait(Sprite portrait)
+    {
+        if (portraitImage != null)
+        {
+            portraitImage.sprite = portrait;
+            portraitImage.enabled = portrait != null;
+        }
+    }
+
+
 
     private void BindExternalFunctions()
     {

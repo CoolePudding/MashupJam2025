@@ -59,6 +59,27 @@ public class PassengerManager : MonoBehaviour
 
     public PassengerData GetPassengerByName(string name)
     {
-        return allPassengers.Find(p => p.passengerName == name);
+        // Normalize input
+        string normalizedInput = name.Trim().ToLower();
+
+        foreach (PassengerData data in allPassengers)
+        {
+            if (data == null || string.IsNullOrEmpty(data.passengerName))
+                continue;
+
+            // Split the full name to get the first name
+            string[] parts = data.passengerName.Split(' ');
+            string firstName = parts[0].ToLower();
+
+            // Match either full name or just first name
+            if (data.passengerName.ToLower() == normalizedInput || firstName == normalizedInput)
+            {
+                return data;
+            }
+        }
+
+        Debug.LogWarning($"Passenger with name '{name}' not found in PassengerManager!");
+        return null;
     }
+
 }

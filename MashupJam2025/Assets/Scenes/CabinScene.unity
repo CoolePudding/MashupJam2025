@@ -1736,6 +1736,7 @@ MonoBehaviour:
   - {fileID: 903410220}
   currentStoryJSON: {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
   Continue: {fileID: 147711149}
+  portraitImage: {fileID: 788080909}
 --- !u!4 &770285998
 Transform:
   m_ObjectHideFlags: 0
@@ -1808,7 +1809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2029693278802858180, guid: 84466a39f4c47824a85eefdd97171740, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

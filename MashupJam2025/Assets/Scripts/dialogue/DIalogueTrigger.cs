@@ -25,6 +25,13 @@ public class DialogueTrigger : MonoBehaviour
 
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
+                PassengerNPC npc = GetComponent<PassengerNPC>();
+
+                if (npc != null && npc.passengerData != null)
+                {
+                    DialogueManager.GetInstance().SetPortrait(npc.passengerData.portrait);
+                }
+
 
                 DialogueManager.GetInstance().StartStory(NPC.passengerData.dialoguePerPhase[0]);
 
