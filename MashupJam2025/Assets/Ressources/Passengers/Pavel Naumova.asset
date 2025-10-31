@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Pavel Naumova
   portrait: {fileID: 21300000, guid: 58adfdf238c8de249bf07a34598a0979, type: 3}
-  dialoguePerPhase: []
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: 4cdf863a553e6f04cacf37d37aee85cb, type: 3}
   animatorController: {fileID: 9100000, guid: 9d11e88daf771314ca3191cb0e1da70a, type: 2}

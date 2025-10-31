@@ -15,4 +15,5 @@ MonoBehaviour:
   passengerName: Anna Kudlai
   portrait: {fileID: -855298285791758126, guid: 858b58bff9ff2ff458fe6167d69ed193, type: 3}
   dialoguePerPhase:
-  - {fileID: 0}
+  - {fileID: 4900000, guid: 907b11f8267dde84fb5ba24080440a16, type: 3}
+  animatorController: {fileID: 0}

@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   visualCue: {fileID: 2047502477794143443}
   inkJSON: {fileID: 4900000, guid: 065f52a1488294c4eb7133d834cb60ad, type: 3}
+  NPC: {fileID: 2256810925967699161}
 --- !u!61 &7584888341857401530
 BoxCollider2D:
   m_ObjectHideFlags: 0

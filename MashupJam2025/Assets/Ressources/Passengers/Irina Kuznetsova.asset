@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Irina Kuznetsova
   portrait: {fileID: 21300000, guid: 26efe86c66309a445918d3e7258a49e8, type: 3}
-  dialoguePerPhase: []
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: 907b11f8267dde84fb5ba24080440a16, type: 3}
   animatorController: {fileID: 9100000, guid: ef0d8e30917bde547ab4165ece0dc3b5, type: 2}

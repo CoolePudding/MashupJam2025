@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Yakiv Myronenko
   portrait: {fileID: 21300000, guid: e2c27e05492458444a011f0f1ff70f07, type: 3}
-  dialoguePerPhase: []
+  dialoguePerPhase:
+  - {fileID: 4900000, guid: bd81d243f91907a42939eea6a2effe5f, type: 3}
   animatorController: {fileID: 9100000, guid: 134de69d234ac7f418011d920aed9a9e, type: 2}
