@@ -1,3 +1,4 @@
+#speaker:???
 The teenager before you is playing solitary with a deck of cards, huming a little song. She doesn't seem to here you approach.
 *Hi, I'm the train conductor, what's your name?
 Oh...  hello sir. I'm Maryna. Maryna Alekseenko. She looks back down at her cards.#speaker:Maryna 

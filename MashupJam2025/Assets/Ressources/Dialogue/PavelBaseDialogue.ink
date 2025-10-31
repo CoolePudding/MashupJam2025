@@ -1,4 +1,4 @@
- 
+ #speaker:???
 This young man seems athletic and sure of himself, but you see the mark of a tired person in him.
 *	Hi, I'm the train conductor, what's your name?
 He sits back right up. Pavel Naumova, nice to meet you. He pronounce words in a weird way but you can't lay your finger on it. #speaker:Pavel

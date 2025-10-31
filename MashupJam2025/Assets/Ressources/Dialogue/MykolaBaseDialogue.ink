@@ -1,4 +1,4 @@
-
+#speaker:???
 this badger is pretty young, despite his cane and obvious limping when he moves around. Always happy to chitchat, he's a warm person.
 
 * Hi, I'm the train conductor, what's your name?

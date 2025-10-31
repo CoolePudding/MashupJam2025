@@ -1,4 +1,4 @@
-
+#speaker:???
 the huge, muscular black hound in a jacket in front of you is never sitting or resting. Always vigilant and regularly smocking, he move only to go talk to his wife either to bring her something or to accompagny her to the bathroom.
 *	Hi, I'm the train conductor, what's your name?
 He coughs a bit, look at you head to feet and back again, then answer. Name’s Yakiv Myronenko. Traveling with my wife, Irina. We’re… keeping to ourselves, if you don’t mind.#speaker:Yakiv

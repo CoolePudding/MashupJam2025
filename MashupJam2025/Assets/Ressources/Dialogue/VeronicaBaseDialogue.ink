@@ -1,4 +1,4 @@
-
+#speaker:???
 This old lady has a almost no teeth and a dark green leather for skin, and her smile and eyes are kind. She smile as you approach.
 *	Hi, madame, I'm the train conductor, what's your name?
 She smile and reply with a crackling yet sweet voice. Hello darling, come, sit with me ! She gently slap your leg as you sit I'm madam Morozova, but you can call me Veronika. #speaker:Veronika

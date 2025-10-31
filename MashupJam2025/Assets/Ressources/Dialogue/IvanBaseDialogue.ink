@@ -1,4 +1,4 @@
-
+#speaker:???
 black and white, this Zebra is strangely wearing a gasmask inside the train. He doesn't seem to want to talk to others
 *•	Hi sir, I'm the train conductor, what's your name?
 You hear is voice muffled under his gasmask. Hello, my name is Ivan Solovei. Thank you for welcoming me in your journey. #speaker:Ivan
