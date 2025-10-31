@@ -16,12 +16,18 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     public float gravity = 5f;
 
+    public AudioSource footstepAudio;
+    private bool isWalkingSoundPlaying = false;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        if (footstepAudio == null)
+            footstepAudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,12 +43,26 @@ public class PlayerController : MonoBehaviour
             lastMoveDirection = moveInput;
             animator.SetBool("isWalking", true);
             sr.flipX = moveInput < 0;
+
+            if (!isWalkingSoundPlaying)
+            {
+                footstepAudio.UnPause();
+                if (!footstepAudio.isPlaying)
+                    footstepAudio.Play();
+                isWalkingSoundPlaying = true;
+            }
         }
 
         else
         {
             sr.flipX = lastMoveDirection < 0;
             animator.SetBool("isWalking", false);
+
+            if (isWalkingSoundPlaying)
+            {
+                footstepAudio.Pause();
+                isWalkingSoundPlaying = false;
+            }
         }
 
         verticalInput = Input.GetAxis("Vertical");
