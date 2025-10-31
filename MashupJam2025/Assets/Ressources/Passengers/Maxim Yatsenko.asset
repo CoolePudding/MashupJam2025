@@ -13,19 +13,6 @@ MonoBehaviour:
   m_Name: Maxim Yatsenko
   m_EditorClassIdentifier: Assembly-CSharp::PassengerData
   passengerName: Maxim Yatsenko
-  portrait: {fileID: -6470460504253458178, guid: 30bec57c9acc09e4e8d91d992e7e8b82, type: 3}
-  healthPoints: 3
-  charDescription: "Maxim Yatsenko is a 35 years old man, with unclear origines.
-    Gambler at heart, he's a risk taker and has trouble to stop in the middle of
-    a streak, winning or loosing. However, he likes to talk (a bit too much maybe
-    ?) and has a past of a con man who made a lot of friends, and as many if not
-    more enemies. He's fleeing the country because \u201Cthe game is dead here, money
-    move somewere else\u201D but as he hide when an officer comes around [\u201Che's
-    not a one-eyed lad with a broken nose, is he ?\u201D], it seems there are other
-    reasons for his departure. Beside his gambling addiction, he has a nose for opportunities
-    and can find nice deals at stations."
-  bonus:
-  - bagou
-  - risque tout
-  - observateur
-  inkJSON: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 83ee587dd728b794abb47c3d351453d5, type: 3}
+  dialoguePerPhase: []
+  animatorController: {fileID: 9100000, guid: 6404df57906f445439fa65be527db28e, type: 2}
